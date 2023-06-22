@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:smart_commando/actions_page.dart';
 import 'package:smart_commando/components/drawer.dart';
 import 'package:smart_commando/components/myappbar.dart';
+import 'package:smart_commando/components/mybutton.dart';
 import 'package:smart_commando/components/mymenu.dart';
 import 'package:smart_commando/constants/my_navigate.dart';
 import 'package:smart_commando/trigger_action.dart';
 import 'components/gradient_text.dart';
 import 'components/my_curve_container.dart';
-import 'components/myoval_gradient_button.dart';
 import 'components/scrollgradient_text.dart';
 import 'constants/constant.dart';
 
@@ -192,11 +192,13 @@ class _DashboardState extends State<Dashboard> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             SafeArea(
-                              child: MyOvalGradientButton(
+                              child: MyButton(
                                 placeHolder: 'View details',
                                 pressed: () async {},
-                                firstcolor: myLightBrown,
-                                secondcolor: myBrown,
+                                gradientColors: myPinkGradient,
+                                isGradientButton: true,
+                                isOval: true,
+                                widthRatio: 0.4,
                               ),
                             )
                           ],

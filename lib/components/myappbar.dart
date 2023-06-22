@@ -32,11 +32,11 @@ class MyAppMenuBar extends StatelessWidget with PreferredSizeWidget {
               ),
             )
           : Image.asset(
-              'assets/red_logo.png',
-              height: 300,
-              width: 300,
+              'assets/logo.png',
+              height: 200,
+              width: 200,
             ),
-      backgroundColor: Colors.white,
+      backgroundColor: mypink.withOpacity(0.22),
       shadowColor: Colors.transparent,
       leading: Container(
         padding: EdgeInsets.only(left: 13),
@@ -54,7 +54,7 @@ class MyAppMenuBar extends StatelessWidget with PreferredSizeWidget {
                     imageUrl == null ? 'assets/svg/menuicon.svg' : imageUrl!,
                     // height: 100,
                     // fit: BoxFit.fill,
-                    color: Colors.black,
+                    color: Colors.white,
                     semanticsLabel: 'A red up arrow'),
               )
             : SizedBox(),
@@ -75,15 +75,15 @@ class MyAppMenuBar extends StatelessWidget with PreferredSizeWidget {
                             width: 15,
                           ),
                           GestureDetector(
-                            onTap: () => MyNavigate.navigatepushuntil(
-                                Profile(), context),
-                            child:
-                                SvgPicture.asset('assets/svg/profileicon.svg',
-                                    height: 22,
-                                    width: 22,
-                                    // color: iconsColor,
-                                    color: Color.fromARGB(255, 201, 199, 199),
-                                    semanticsLabel: 'A red up arrow'),
+                            onTap: () =>
+                                MyNavigate.navigatejustpush(Profile(), context),
+                            child: SvgPicture.asset(
+                                'assets/svg/profileicon.svg',
+                                height: 22,
+                                width: 22,
+                                color: iconsColor,
+                                // color: Color.fromARGB(255, 201, 199, 199),
+                                semanticsLabel: 'A red up arrow'),
                           ),
                         ],
                       ),

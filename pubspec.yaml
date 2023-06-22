@@ -28,10 +28,21 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   iconly: ^1.0.1
   flutter_svg: ^1.0.3
+  form_field_validator: ^1.1.0
+  photo_view: 0.12.0
+  http: ^0.13.5
+  shared_preferences: ^2.0.15
+  provider: ^6.0.3
+  file_picker: ^4.3.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_vlc_player: 7.1.5
+  web_socket_channel: ^2.3.0
+  network_info_plus: ^3.0.1
+  wifi_iot: ^0.3.18
+  dio: ^4.0.6
 
 dev_dependencies:
   flutter_test:
@@ -42,13 +53,13 @@ dev_dependencies:
   pin_code_fields: ^7.4.0
 
 flutter_icons:
-  image_path: "assets/logo1.png"
-  adaptive_icon_background: "#ff4f5a"
+  image_path: "assets/launcher.png"
+  adaptive_icon_background: "#ffffff"
   android: true
   ios: true
 flutter_native_splash:
-  color: "#ff4f5a"
-  image: assets/logo1.png
+  color: "#ffffff"
+  image: assets/smaller-logo.png
 #
 flutter:
   uses-material-design: true

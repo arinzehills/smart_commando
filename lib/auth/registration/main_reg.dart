@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:smart_commando/components/my_text_field.dart';
-import 'package:smart_commando/components/myoval_gradient_button.dart';
+import 'package:smart_commando/components/mybutton.dart';
 import 'package:smart_commando/constants/constant.dart';
 
 import 'name_page.dart';
 
 class MainReg extends StatefulWidget {
-    final controller;
+  final controller;
 
-  const MainReg({ Key? key,
-          required this.controller, }) : super(key: key);
+  const MainReg({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   State<MainReg> createState() => _MainRegState();
@@ -23,54 +25,50 @@ class _MainRegState extends State<MainReg> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top:38.0),
+          padding: const EdgeInsets.only(top: 38.0),
           child: MyFormWidget(name: 'Register', image: 'smart_commando2.png'),
         ),
         Form(
-            key: _formKey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left:20.0,top: 10,right: 20),
-                  child: MyTextField(
-                  validator: (val)=> val!.isEmpty ? 'Please Enter an address' : null,
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, top: 10, right: 20),
+                child: MyTextField(
+                  validator: (val) =>
+                      val!.isEmpty ? 'Please Enter an address' : null,
                   hintText: 'Enter email',
-                  keyboardType:TextInputType.name,
+                  keyboardType: TextInputType.name,
                   autovalidate: false,
-                  ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left:20.0,top: 10,right: 20),
-                  child: MyTextField(
-                  validator: (val)=> val!.isEmpty ? 'Please Enter password' : null,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, top: 10, right: 20),
+                child: MyTextField(
+                  validator: (val) =>
+                      val!.isEmpty ? 'Please Enter password' : null,
                   hintText: 'Enter password',
-                  keyboardType:TextInputType.name,
+                  keyboardType: TextInputType.name,
                   autovalidate: false,
-                  ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left:8.0,top: 10),
-                  child: MyOvalGradientButton(
-                    width: MediaQuery.of(context).size.width* 0.9,
+              ),
+              Padding(
+                  padding: EdgeInsets.only(left: 8.0, top: 10),
+                  child: MyButton(
                     height: 60,
-                    firstcolor: myBrownGradient[1],
-                    secondcolor: myBrownGradient[0],
-                    pressed: (){
-                        if(_formKey.currentState!.validate()){
-                            widget.controller.nextPage(
+                    pressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        widget.controller.nextPage(
                             duration: Duration(milliseconds: 1000),
-                               curve: Curves.easeIn
-                            );
-                    
-                            }
-                    } ,
-                      placeHolder: 'Continue',
-                  )
-                ),
-              ],
-            ),
+                            curve: Curves.easeIn);
+                      }
+                    },
+                    placeHolder: 'Continue',
+                  )),
+            ],
           ),
+        ),
       ],
     );
   }

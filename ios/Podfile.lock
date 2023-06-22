@@ -1,0 +1,97 @@
+PODS:
+  - DKImagePickerController/Core (4.3.4):
+    - DKImagePickerController/ImageDataManager
+    - DKImagePickerController/Resource
+  - DKImagePickerController/ImageDataManager (4.3.4)
+  - DKImagePickerController/PhotoGallery (4.3.4):
+    - DKImagePickerController/Core
+    - DKPhotoGallery
+  - DKImagePickerController/Resource (4.3.4)
+  - DKPhotoGallery (0.0.17):
+    - DKPhotoGallery/Core (= 0.0.17)
+    - DKPhotoGallery/Model (= 0.0.17)
+    - DKPhotoGallery/Preview (= 0.0.17)
+    - DKPhotoGallery/Resource (= 0.0.17)
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Core (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Preview
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Model (0.0.17):
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Preview (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Resource
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Resource (0.0.17):
+    - SDWebImage
+    - SwiftyGif
+  - file_picker (0.0.1):
+    - DKImagePickerController/PhotoGallery
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_vlc_player (3.0.3):
+    - Flutter
+    - MobileVLCKit (~> 3.4)
+  - MobileVLCKit (3.5.1)
+  - network_info_plus (0.0.1):
+    - Flutter
+  - SDWebImage (5.13.4):
+    - SDWebImage/Core (= 5.13.4)
+  - SDWebImage/Core (5.13.4)
+  - shared_preferences_ios (0.0.1):
+    - Flutter
+  - SwiftyGif (5.4.3)
+  - wifi_iot (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - file_picker (from `.symlinks/plugins/file_picker/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_vlc_player (from `.symlinks/plugins/flutter_vlc_player/ios`)
+  - network_info_plus (from `.symlinks/plugins/network_info_plus/ios`)
+  - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
+  - wifi_iot (from `.symlinks/plugins/wifi_iot/ios`)
+
+SPEC REPOS:
+  trunk:
+    - DKImagePickerController
+    - DKPhotoGallery
+    - MobileVLCKit
+    - SDWebImage
+    - SwiftyGif
+
+EXTERNAL SOURCES:
+  file_picker:
+    :path: ".symlinks/plugins/file_picker/ios"
+  Flutter:
+    :path: Flutter
+  flutter_vlc_player:
+    :path: ".symlinks/plugins/flutter_vlc_player/ios"
+  network_info_plus:
+    :path: ".symlinks/plugins/network_info_plus/ios"
+  shared_preferences_ios:
+    :path: ".symlinks/plugins/shared_preferences_ios/ios"
+  wifi_iot:
+    :path: ".symlinks/plugins/wifi_iot/ios"
+
+SPEC CHECKSUMS:
+  DKImagePickerController: b512c28220a2b8ac7419f21c491fc8534b7601ac
+  DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
+  file_picker: 817ab1d8cd2da9d2da412a417162deee3500fc95
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_vlc_player: a0bd756da5d2456f6d26963976616185a65ec677
+  MobileVLCKit: 144d5f565512d1147d63b0fa1379231b3fd66535
+  network_info_plus: b78876159360f5580608c2cea620d6ceffabd0ad
+  SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
+  shared_preferences_ios: 548a61f8053b9b8a49ac19c1ffbc8b92c50d68ad
+  SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
+  wifi_iot: b5aafd6f9b52f8a357383a1deabab45f31cd602d
+
+PODFILE CHECKSUM: 7368163408c647b7eb699d0d788ba6718e18fb8d
+
+COCOAPODS: 1.12.1

@@ -5,12 +5,13 @@ class GradientText extends StatelessWidget {
     this.text, {
     required this.gradient,
     this.style,
+    this.overflow,
   });
 
   final String text;
   final TextStyle? style;
   final Gradient gradient;
-
+  final TextOverflow? overflow;
   @override
   Widget build(BuildContext context) {
     return ShaderMask(
@@ -18,7 +19,8 @@ class GradientText extends StatelessWidget {
       shaderCallback: (bounds) => gradient.createShader(
         Rect.fromLTWH(0, 0, bounds.width, bounds.height),
       ),
-      child: Text(text,overflow: TextOverflow.ellipsis, style: style),
+      child:
+          Text(text, overflow: overflow ?? TextOverflow.ellipsis, style: style),
     );
   }
 }

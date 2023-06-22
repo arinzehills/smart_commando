@@ -34,7 +34,7 @@ class NormalCurveContainer extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: myBrownGradient)),
+              colors: myPinkGradient)),
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.start,

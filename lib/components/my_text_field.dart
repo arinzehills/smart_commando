@@ -53,6 +53,7 @@ class _MyTextFieldState extends State<MyTextField> {
   Widget build(BuildContext context) {
     return TextFormField(
       validator: widget.validator,
+      style: TextStyle(height: 1),
       // maxLines: 2,
       // autovalidate: widget.autovalidate!,
       keyboardType: widget.keyboardType,
@@ -61,7 +62,7 @@ class _MyTextFieldState extends State<MyTextField> {
       decoration: textFieldDecoration.copyWith(
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.suffixIconButton,
-          fillColor: myBrown.withOpacity(0.5),
+          fillColor: mypink.withOpacity(0.18),
           // suffixIcon: ,
           hintText: widget.hintText,
           hintStyle: TextStyle(color: myDarkBrown)),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:smart_commando/actions_page.dart';
 import 'package:smart_commando/components/gradient_text.dart';
 import 'package:smart_commando/components/mybutton.dart';
 import 'package:smart_commando/constants/constant.dart';
@@ -81,7 +82,7 @@ class _MyDrawerState extends State<MyDrawer> {
               index: 1,
               isCustomRouting: true,
               route: Dashboard(),
-              title: 'Polls'),
+              title: 'Dashboard'),
           buildMenuItem(
               context: context,
               isCustomRouting: true,
@@ -92,7 +93,9 @@ class _MyDrawerState extends State<MyDrawer> {
               context: context,
               isCustomRouting: true,
               index: 9,
-              route: Profile(),
+              route: ActionsPage(
+                user_id: 1,
+              ),
               title: 'Actions'),
           MyButton(
               placeHolder: 'Logout',
@@ -140,7 +143,7 @@ class _MyDrawerState extends State<MyDrawer> {
           setState(() {
             _selectedIndex = index;
           }),
-          MyNavigate.navigatepushuntil(route, context)
+          MyNavigate.navigateandreplace(route, context)
         },
         // selected: _selectedIndex == 5,
       ),

@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:smart_commando/components/myoval_gradient_button.dart';
+import 'package:smart_commando/components/mybutton.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:smart_commando/services/iot_service.dart';
 
 class Constants {
   Constants._();
@@ -18,6 +19,9 @@ class TriggerAction extends StatefulWidget {
 
 class _TriggerActionState extends State<TriggerAction> {
   final _formKey = GlobalKey<FormState>();
+
+  bool onSpray = false;
+  bool loading = false;
 
   _emailFailure(context) {
     Navigator.pop(context);
@@ -49,14 +53,14 @@ class _TriggerActionState extends State<TriggerAction> {
                   style: TextStyle(fontSize: 15, fontFamily: 'Roboto'),
                 ),
                 SizedBox(height: 4),
-                RaisedButton(
+                ElevatedButton(
                   child: Text(
                     status == true ? 'OK' : 'Re-enter email',
                     style: TextStyle(color: Colors.white, fontFamily: 'Roboto'),
                   ),
-                  color: status == true ? const Color(0xff2FCA7C) : Colors.red,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)),
+                  // color: status == true ? const Color(0xff2FCA7C) : Colors.red,
+                  // shape: RoundedRectangleBorder(
+                  //     borderRadius: BorderRadius.circular(30)),
                   onPressed: () => {
                     status == true
                         ? _emailFailure(context)
@@ -127,6 +131,7 @@ class _TriggerActionState extends State<TriggerAction> {
                                 shape: PinCodeFieldShape.box,
                                 borderRadius: BorderRadius.circular(10),
                                 fieldHeight: 50,
+                                activeColor: Colors.green,
                                 fieldWidth: 40,
                                 activeFillColor: Colors.white,
                               ),
@@ -136,6 +141,7 @@ class _TriggerActionState extends State<TriggerAction> {
                               // controller: textEditingController,
                               onCompleted: (v) {
                                 print("Completed");
+                                setState(() => onSpray = !onSpray);
                               },
                               onChanged: (value) {
                                 print(value);
@@ -153,14 +159,23 @@ class _TriggerActionState extends State<TriggerAction> {
                             ),
                             Padding(
                                 padding: EdgeInsets.only(left: 8.0, top: 10),
-                                child: MyOvalGradientButton(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.9,
+                                child: MyButton(
+                                  // width:
+                                  //     MediaQuery.of(context).size.width * 0.9,
+                                  loadingState: loading,
+                                  color: onSpray ? Colors.tealAccent : null,
                                   height: 60,
-                                  firstcolor: Colors.red,
-                                  secondcolor: Colors.red,
-                                  pressed: () {},
-                                  placeHolder: 'Blow Tear Gas',
+                                  pressed: () async {
+                                    setState(() =>
+                                        {onSpray = !onSpray, loading = true});
+                                    var response = await IotService()
+                                        .sprayGas(1234, onSpray);
+                                    print('body');
+                                    print(response['success']);
+                                    setState(() => {loading = false});
+                                  },
+                                  placeHolder:
+                                      onSpray ? "Off spray" : 'Spray gas',
                                 ))
                           ]),
                     ),

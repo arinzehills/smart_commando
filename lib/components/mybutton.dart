@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_commando/constants/constant.dart';
 
 class MyButton extends StatelessWidget {
   String placeHolder;
@@ -9,6 +10,7 @@ class MyButton extends StatelessWidget {
   bool isGradientButton;
   bool loadingState;
   List<Color>? gradientColors;
+  Color? color;
   final VoidCallback pressed;
   Widget? child;
 
@@ -25,22 +27,28 @@ class MyButton extends StatelessWidget {
     this.isGradientButton = false,
     this.loadingState = false,
     this.gradientColors,
+    this.color,
     required this.pressed,
   });
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton(
       onPressed: loadingState ? null : pressed,
-      disabledColor: Colors.orange,
-      disabledTextColor: Colors.white,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(isOval ? 80.0 : 0.0)),
-      padding: const EdgeInsets.all(0.0),
+      style: ButtonStyle(
+        // padding:
+        shape: MaterialStateProperty.all(StadiumBorder()),
+        padding: MaterialStateProperty.all(EdgeInsets.all(0.0)),
+      ),
+      // disabledColor: Colors.orange,
+      // disabledTextColor: Colors.white,
+      // shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.circular(isOval ? 80.0 : 0.0)),
       child: Ink(
         width: MediaQuery.of(context).size.width * (widthRatio ?? 0.9),
-        height: height ?? 62,
+        height: height ?? 55,
         decoration: BoxDecoration(
+          color: color ?? myorange,
           border: withBorder ? Border.all(color: Colors.white) : null,
           gradient: isGradientButton
               ? LinearGradient(
@@ -69,7 +77,7 @@ class MyButton extends StatelessWidget {
                       placeHolder,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: Colors.white, fontSize: fontSize ?? 23),
+                          color: Colors.white, fontSize: fontSize ?? 16),
                     ),
                     child ?? SizedBox(),
                   ],
