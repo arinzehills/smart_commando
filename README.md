@@ -1,6 +1,8 @@
-# Project Name
+# SMART COMMANDO APP
 
-A brief description of your project.
+## A brief description of your project
+
+This is a mobile app that is use to control the smart home monitoring and control system, to deter intruders when they entered your home, you can use the camera to view the state of your home and also to send them packing by clicking a button, called spray
 
 ## Getting Started
 
@@ -27,6 +29,36 @@ Before running the project, make sure you have the following prerequisites insta
 2. In the terminal or command prompt, run the following command to launch the app: flutter run(all in the project directory)
 
 This command will build the app and launch it on your emulator/device.
+
+### Building the application
+
+1. Run flutter build apk
+
+2. Ensure that you have a device connected to your machine.
+
+3. Run flutter install
+
+4. download and install
+
+## To Use the Already app
+
+1. Go to this url
+
+2. download and install
+
+3. Sign up or sign in into the app if you have created an account
+
+4. ENNJOY!!!
+
+## To Use the Camera view app
+
+1. Go to this url
+
+2. download and install
+
+3. Sign up or sign in into the app if you have created an account
+
+4. ENNJOY!!!
 
 <!-- ## Acknowledgments
 
