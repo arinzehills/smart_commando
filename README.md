@@ -42,17 +42,7 @@ This command will build the app and launch it on your emulator/device.
 
 ## To Use the Already app
 
-1. Go to this url [smartcommando app](https://flutter.dev/docs/get-started/install)
-
-2. download and install
-
-3. Sign up or sign in into the app if you have created an account
-
-4. ENNJOY!!!
-
-## To Use the Camera view app
-
-1. Go to this url
+1. Go to this url [smartcommando app](https://drive.google.com/file/d/1VxoJh-3mk7v4pe-ZagddGOPxx7JWhd7h/view?usp=drive_link)
 
 2. download and install
 
