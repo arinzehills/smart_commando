@@ -36,9 +36,15 @@ This command will build the app and launch it on your emulator/device.
 
 2. Ensure that you have a device connected to your machine.
 
-3. Run flutter install
+3. Run flutter install to install the app
 
-4. download and install
+## Application usage
+
+This application uses localhost to communicate with the hardware, so you have to follow this to ensure it runs
+
+1. create a hotspot/wifi with the name arinzeIOT and with passwords projects
+2. then the project can be clicked and it will run
+3. if it did not work, you have to check in the code file named iot_service.dart and change the url to your ipaddress e.g http://ipaddress/turnservo and so on then it turns
 
 ## To Use the Already app
 
